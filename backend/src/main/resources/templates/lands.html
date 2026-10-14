@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Available Lands - LandMatch</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f7f6;
+        }
+
+        header {
+            background: #1b5e20;
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        .container {
+            width: 85%;
+            margin: 30px auto;
+        }
+
+        .title {
+            text-align: center;
+            color: #1b5e20;
+            margin-bottom: 25px;
+        }
+
+        .land-card {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+        }
+
+        .land-card h2 {
+            color: #1b5e20;
+            margin-top: 0;
+        }
+
+        .land-card p {
+            margin: 8px 0;
+        }
+
+        .back-button {
+            display: block;
+            width: 200px;
+            margin: 25px auto;
+            padding: 12px;
+            background: #2e7d32;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 7px;
+        }
+
+        .back-button:hover {
+            background: #1b5e20;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>🌱 LandMatch</h1>
+    <p>Available Lands</p>
+</header>
+
+<div class="container">
+
+    <h2 class="title">Available Lands for Sale</h2>
+
+    <div class="land-card" th:each="land : ${lands}">
+
+        <h2>Land Property</h2>
+
+        <p>
+            <strong>Owner:</strong>
+            <span th:text="${land.ownerName}"></span>
+        </p>
+
+        <p>
+            <strong>Location:</strong>
+            <span th:text="${land.location}"></span>
+        </p>
+
+        <p>
+            <strong>Area:</strong>
+            <span th:text="${land.area}"></span> sq.ft
+        </p>
+
+        <p>
+            <strong>Price:</strong>
+            ₹<span th:text="${land.price}"></span>
+        </p>
+
+        <p>
+            <strong>Description:</strong>
+            <span th:text="${land.description}"></span>
+        </p>
+
+    </div>
+
+    <a href="/" class="back-button">← Back to Home</a>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sell Your Land - LandMatch</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f7f6;
+        }
+
+        header {
+            background: #1b5e20;
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        .container {
+            width: 500px;
+            max-width: 90%;
+            margin: 35px auto;
+        }
+
+        .form-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+        }
+
+        .form-card h2 {
+            text-align: center;
+            color: #1b5e20;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        input, textarea {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 12px;
+            margin-top: 7px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 15px;
+        }
+
+        textarea {
+            height: 100px;
+            resize: none;
+        }
+
+        button {
+            width: 100%;
+            padding: 13px;
+            margin-top: 20px;
+            border: none;
+            border-radius: 7px;
+            background: #2e7d32;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #1b5e20;
+        }
+
+        .back {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: #1b5e20;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>🌱 LandMatch</h1>
+    <p>Sell Your Land</p>
+</header>
+
+<div class="container">
+
+    <div class="form-card">
+
+        <h2>List Your Land</h2>
+
+        <form action="/save-land" method="post">
+
+    <label>Owner Name</label>
+    <input type="text" name="ownerName" placeholder="Enter owner name" required>
+
+    <label>Location</label>
+    <input type="text" name="location" placeholder="Enter land location" required>
+
+    <label>Area (sq.ft)</label>
+    <input type="number" name="area" placeholder="Enter area" required>
+
+    <label>Price (₹)</label>
+    <input type="number" name="price" placeholder="Enter price" required>
+
+    <label>Description</label>
+    <textarea name="description" placeholder="Enter land description" required></textarea>
+
+    <button type="submit">Add Land</button>
+
+</form>
+
+        <a href="/" class="back">← Back to Home</a>
+
+    </div>
+
+</div>
+
+</body>
+</html>

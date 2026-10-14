@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LandMatch</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f7f6;
+        }
+
+        header {
+            background: #1b5e20;
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 35px;
+        }
+
+        header p {
+            margin: 8px 0 0;
+            font-size: 17px;
+        }
+
+        .container {
+            width: 80%;
+            margin: 40px auto;
+            display: flex;
+            justify-content: center;
+        }
+
+        .card {
+            background: white;
+            width: 450px;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+        }
+
+        .card h2 {
+            text-align: center;
+            color: #1b5e20;
+        }
+
+        .button {
+            display: block;
+            width: 100%;
+            padding: 14px;
+            margin-top: 15px;
+            border: none;
+            border-radius: 7px;
+            background: #2e7d32;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background: #1b5e20;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>🌱 LandMatch</h1>
+    <p>Connect Land Sellers with Buyers</p>
+</header>
+
+<div class="container">
+
+    <div class="card">
+
+        <h2>Welcome to LandMatch</h2>
+
+        <p>
+            Find suitable land or list your land for sale
+            through our simple platform.
+        </p>
+
+        <button class="button" onclick="location.href='/lands'">
+            View Available Lands
+        </button>
+
+        <button class="button" onclick="location.href='/add-land'">
+            Sell Your Land
+        </button>
+
+    </div>
+
+</div>
+
+</body>
+</html>
